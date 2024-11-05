@@ -1,4 +1,5 @@
 .header-section{
+  top: 0;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -9,6 +10,7 @@
   background-color: white;
    font-family: "Inter", serif;
    padding: 20px 16px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .header-logo img{

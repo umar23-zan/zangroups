@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Footer from './Footer';
 import './home.css'
 import home2 from '../images/Home-2.svg';
 import home3 from '../images/Home-3.png'
@@ -89,6 +90,7 @@ const Home = () => {
             </form>
           
         </div>
+        <Footer />
       </div>
   )
 }
