@@ -1,0 +1,30 @@
+#bg-video{
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.career-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 300px 300px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.career-info h1{
+  font-size: 64px;
+  color: white;
+  margin: 0;
+}
+
+.career-info p{
+  font-size: 26px;
+  color: black;
+  font-weight: bold;
+}

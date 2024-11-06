@@ -1,0 +1,41 @@
+.contact-section{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  margin-top: 100px;
+ font-family: "Open Sans", sans-serif;
+ padding: 70px 100px;
+}
+
+.contact-section h1{
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.contact-section h3{
+  font-size: 18px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.contact-section p{
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0;
+}
+
+.socialmedia-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.socialmedia-icons{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.socialmedia-icons img{
+  width: 20px;
+  height: 20px;
+}
