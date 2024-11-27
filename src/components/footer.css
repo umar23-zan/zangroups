@@ -32,7 +32,7 @@
  width: 100%;
 }
 .copyright p{
-  padding-left: 325px;
+  padding-left: 220px;
 }
 
 .footer-form{
@@ -83,5 +83,12 @@
   }
   .copyright p{
     padding-left: 220px;
+  }
+  .footer-form-details input{
+    width: 250px;
+    height: 37px;
+    border-radius: 10px;
+    border-style: solid;
+    border: none;
   }
 }
