@@ -73,7 +73,7 @@ const Home = () => {
             </div>
             <div className='Contactus-email'>
               <h3>Email</h3>
-              <p>info@zangroups.com</p>
+              <p>info@zansphere.com</p>
             </div>
           </div>
           

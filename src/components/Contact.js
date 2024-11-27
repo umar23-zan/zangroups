@@ -17,7 +17,7 @@ const Contact = () => {
             <h1>Contact us</h1>
             <p>Feel free to contact us with any questions or concerns. You can use the form on our website or email us directly. We appreciate your interest and look forward to hearing from you.</p>
             <h3>Email</h3>
-            <p>info@zangroups.com</p>
+            <p>info@zansphere.com</p>
             <h3>Address</h3>
             <p>Alwarpet, Chennai.</p>
           </div>

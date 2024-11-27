@@ -12,7 +12,7 @@ const Career = () => {
       <Header />
       <div className='career-info'>
         <h1>Join the Band</h1>
-        <p>Career@zangroups.com</p>
+        <p>Career@zansphere.com</p>
       </div>
       <Footer />
     </div>
