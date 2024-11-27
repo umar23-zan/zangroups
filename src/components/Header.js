@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <div className='header-section'>
       <div className='header-logo'>
-        <img src={logo} alt="logo" />
+        <img src={logo} alt="logo"  className='logo'/>
       </div>
       <div className='header-nav-section'>
         <div className={`header-navlinks ${menuOpen ? 'open' : ''}`}>
