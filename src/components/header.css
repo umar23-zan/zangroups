@@ -12,18 +12,20 @@ body, html {
   width: 100vw;
   /* max-width: 100vw; */
   height: 70px;
-  justify-content: space-around;
+  /* justify-content: space-between; */
+  gap: 60%;
   align-items: center;
   position: fixed;
   background-color: white;
    font-family: "Inter", serif;
-   padding: 20px 16px;
+   padding: 20px 0px;
    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .header-logo img{
-  width: 160px;
-  height: 69px;
+  margin-left: 20px;
+  width: 215px;
+  height: 78px;
 }
 
 .header-navlinks{
