@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 import './services.css'
@@ -7,6 +8,7 @@ import service2 from '../images/Services-2.svg'
 import service3 from '../images/Services-3.svg'
 
 const Services = () => {
+  const navigate=useNavigate();
   return (
     <div>
       <Header />
@@ -25,7 +27,9 @@ const Services = () => {
             <div>
               <h1>Ship with Confidence: Expert QA Testing for Flawless Software.</h1>
               <p>We identify and fix issues before they impact your users.</p>
-              <button>Schedule a QA Consultation.</button>
+              <button onClick={() => {
+                navigate('/contact')
+              }}>Schedule a QA Consultation.</button>
             </div>
             <div>
               <img src={service2} alt="service2" />

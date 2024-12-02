@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 import Header from './Header'
 import Footer from './Footer';
 import './home.css'
@@ -6,13 +7,17 @@ import home2 from '../images/Home-2.svg';
 import home3 from '../images/Home-3.png'
 
 const Home = () => {
+  const navigate=useNavigate();
   return (
+    
     <div >
       <Header />
       <div className='software-services-section'>
             <h1 className=''>Discover our expert software services today</h1>
             <p>We are a leading software technical company in Chennai providing development, QA, and security testing services.</p>
-            <button className='Explore-btn'>
+            <button className='Explore-btn' onClick={() => {
+              navigate('/services')
+            }}>
               Explore
             </button>
             <div className='stickercard-section'>

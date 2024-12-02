@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../images/zanLogo.png';
 import './header.css';
 
 const Header = () => {
+  const navigate=useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -13,7 +14,9 @@ const Header = () => {
   return (
     <div className='header-section'>
       <div className='header-logo'>
-        <img src={logo} alt="logo"  className='logo'/>
+        <img src={logo} alt="logo"  className='logo' onClick={() => {
+          navigate('/')
+        }}/>
       </div>
       <div className='header-nav-section'>
         <div className={`header-navlinks ${menuOpen ? 'open' : ''}`}>

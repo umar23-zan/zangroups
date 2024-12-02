@@ -18,6 +18,7 @@
 .logo{
   width: 320px;
   height: 115px;
+  cursor: pointer;
 }
 .hamburger{
   display: none;
