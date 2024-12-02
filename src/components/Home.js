@@ -70,31 +70,7 @@ const Home = () => {
             <img src={home3} alt="home" />
           </div>
         </div>
-        <div className='Contactus-section'>
-          <div className='Contactus-details-section'>
-            <div className='Contactus-details'>
-              <h1>Contact Us for Software Services</h1>
-              <p>Get in touch with ZAN, a Chennai-based software technical company offering development, QA, DevOps, security testing, software products, and technical training services.</p>
-            </div>
-            <div className='Contactus-email'>
-              <h3>Email</h3>
-              <p>info@zansphere.com</p>
-            </div>
-          </div>
-          
-            <form className='form-section' action="submit">
-            <label>Enter your first name here</label>
-            <input type="name" name="name" placeholder='Type your first name'/>
-            <label>Enter your email address here*</label>
-            <input type="email" name="email" placeholder='Type your email address'/>
-            <label>Enter your message here</label>
-            <input className='message-container' type="text" name="message" placeholder='Type your Message'/>
-            <button type='submit'>
-              Submit your form here
-            </button>
-            </form>
-          
-        </div>
+
         <Footer />
       </div>
   )
