@@ -62,6 +62,10 @@
   border: none;
   background-color: black;
 }
+.footer-form-details button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
 
 @media(max-width: 768px){
   .footer-info{

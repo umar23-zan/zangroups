@@ -13,7 +13,36 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitted(true);
+        alert(data.message);
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        alert(data.error || 'Something went wrong.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Unable to send your message. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,11 +60,7 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    // Add your form submission logic here
-  };
+  
 
   return (
     <div>
@@ -62,6 +87,7 @@ const Contact = () => {
                   name="name"
                   placeholder='Type your first name'
                   className='animated-input'
+                  value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                 />
               </div>
@@ -72,6 +98,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   placeholder='Type your email address'
+                  value={formData.email}
                   className='animated-input'
                   required
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -83,13 +110,14 @@ const Contact = () => {
                 <textarea 
                   className='message-container animated-input'
                   name="message"
+                  value={formData.message}
                   placeholder='Type your Message'
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
                 />
               </div>
 
-              <button type='submit' className='submit-button'>
-                <span>Submit your form here</span>
+              <button type='submit' className='submit-button' disabled={isLoading}>
+              <span>{isLoading ? 'Submitting...' : 'Submit your form here'}</span>
                 <div className='button-glow'></div>
               </button>
 
