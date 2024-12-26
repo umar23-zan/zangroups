@@ -9,6 +9,7 @@
   position: fixed;
   width: 100vw;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1000;
 }
 .header-logo{
   display: flex;
@@ -19,6 +20,7 @@
   width: 320px;
   height: 115px;
   cursor: pointer;
+  object-fit: cover;
 }
 .hamburger{
   display: none;

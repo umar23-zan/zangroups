@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../images/zanLogo.png';
+import logo from '../images/zanSphereLogo.svg';
 import './header.css';
 
 const Header = () => {

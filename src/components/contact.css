@@ -239,3 +239,202 @@
    gap: 20px;
   }
 }
+
+/* Add to your existing contact.css */
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animated Title */
+.animated-title {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.animated-title:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Form Styles */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.animated-input {
+  width: 100%;
+  /* height: 50px; */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.animated-input:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.animated-input::placeholder {
+  color: #999;
+  transition: opacity 0.3s ease;
+}
+
+.animated-input:focus::placeholder {
+  opacity: 0.5;
+}
+
+/* Button Animation */
+.submit-button {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+}
+
+.button-glow {
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  left: -60px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: button-glow 2s infinite;
+}
+
+@keyframes button-glow {
+  0% {
+    left: -60px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Hover Card Effect */
+.hover-card {
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Media Icons */
+.socialmedia-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon-wrapper {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.social-icon {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Success Message */
+.success-message {
+  background: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+  text-align: center;
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .animated-input,
+  .submit-button,
+  .hover-card,
+  .social-icon {
+    transition: none;
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .animated-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .hover-card:hover {
+    transform: translateY(-3px);
+  }
+}

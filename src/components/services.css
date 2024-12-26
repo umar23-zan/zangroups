@@ -166,3 +166,170 @@
     font-size: 11px;
   }
 }
+
+/* Add to your existing services.css */
+
+/* Slide In Animations */
+.slide-in {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.slide-left {
+  transform: translateX(-100px);
+}
+
+.slide-right {
+  transform: translateX(100px);
+}
+
+.slide-in-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Image Hover Effects */
+.service-image {
+  transition: transform 0.5s ease-out;
+  position: relative;
+}
+
+.service-image:hover {
+  transform: scale(1.05);
+}
+
+/* Button Animation */
+.animated-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #000000, #333333);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animated-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: button-shine 1.5s infinite;
+}
+
+@keyframes button-shine {
+  100% {
+    left: 200%;
+  }
+}
+
+/* Section Hover Effects */
+.service-section-1,
+.service-section-2,
+.service-section-3 {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.service-section-1:hover,
+.service-section-2:hover,
+.service-section-3:hover {
+  transform: translateY(-5px);
+}
+
+/* Text Animation */
+h1 {
+  position: relative;
+  overflow: hidden;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #000, transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.slide-in-visible h1:hover::after {
+  transform: translateX(100%);
+}
+
+/* Responsive Animation Adjustments */
+@media (prefers-reduced-motion: reduce) {
+  .slide-in,
+  .service-image,
+  .animated-button,
+  .button-shine,
+  h1::after {
+    transition: none;
+    animation: none;
+  }
+  
+  .slide-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-left,
+  .slide-right {
+    transform: translateY(50px);
+  }
+
+  .slide-in-visible {
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced Background Effects */
+.service-section-1,
+.service-section-3 {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-section-1::before,
+.service-section-3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(245, 237, 220, 0.8) 0%, rgba(245, 237, 220, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.service-section-1:hover::before,
+.service-section-3:hover::before {
+  opacity: 1;
+}
+
+/* Content Focus Effect */
+.service-section p {
+  transition: all 0.3s ease;
+}
+
+.service-section-1:hover p,
+.service-section-2:hover p,
+.service-section-3:hover p {
+  transform: scale(1.02);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
