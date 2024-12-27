@@ -40,7 +40,7 @@ const Services = () => {
           <div className='slide-in slide-right'>
             <h1>Imagine it. Build it. We make software dreams a reality.</h1>
             <p>We leverage cutting-edge technology to build solutions that thrive.</p>
-            <button className="animated-button">
+            <button className="animated-button" onClick={() => {navigate('/contact')}}>
               Start Building Your Dream App
               <span className="button-shine"></span>
             </button>
@@ -71,7 +71,7 @@ const Services = () => {
           <div className='slide-in slide-right'>
             <h1>Vulnerability? No Way! Secure Your Software with Rigorous Testing.</h1>
             <p>Identify and fix security flaws before they become costly breaches.</p>
-            <button className="animated-button">
+            <button className="animated-button" onClick={() => {navigate('/contact')}}>
               Get a Security Audit!
               <span className="button-shine"></span>
             </button>

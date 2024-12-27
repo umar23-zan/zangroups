@@ -103,7 +103,7 @@ const Home = () => {
       <div className='aboutus-section'>
         <div className='aboutus-details fade-in'>
           <h1>About Us</h1>
-          <p>Welcome to Zan, a leading software technical company based in Chennai offering development, QA, DevOps, security testing, software products, and technical training services.</p>
+          <p>Welcome to ZanSphere, a leading software technical company based in Chennai offering development, QA, DevOps, security testing, software products, and technical training services.</p>
         </div>
         <div className='aboutus-image fade-in'>
           <img src={home3} alt="home" className='hover-scale' />

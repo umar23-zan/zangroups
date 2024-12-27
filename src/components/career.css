@@ -1,4 +1,4 @@
-#bg-video{
+/* #bg-video{
   object-fit: cover;
   width: 100vw;
   height: 100vh;
@@ -62,5 +62,95 @@
   }
   .career-info p{
     font-size: 16px;
+  }
+} */
+
+/* Main container styles */
+.career-container {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Video background styles */
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Header styles */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* Career info section styles */
+.career-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  margin-top: 60px; /* Adjust based on your header height */
+  margin-bottom: 60px; /* Adjust based on your footer height */
+}
+
+.career-info h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.career-info p {
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer styles */
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .career-info h1 {
+    font-size: 2.5rem;
+  }
+  
+  .career-info p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .career-info h1 {
+    font-size: 2rem;
+  }
+  
+  .career-info p {
+    font-size: 1rem;
+  }
+  
+  .career-info {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 }

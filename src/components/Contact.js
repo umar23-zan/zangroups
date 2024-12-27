@@ -71,7 +71,7 @@ const Contact = () => {
             <div className='Contactus-details-section fade-in'>
               <div className='Contactus-details'>
                 <h1 className='animated-title'>Contact Us for Software Services</h1>
-                <p>Get in touch with ZAN, a Chennai-based software technical company offering development, QA, DevOps, security testing, software products, and technical training services.</p>
+                <p>Get in touch with ZanSphere, a Chennai-based software technical company offering development, QA, DevOps, security testing, software products, and technical training services.</p>
               </div>
               <div className='Contactus-email hover-card'>
                 <h3>Email</h3>
