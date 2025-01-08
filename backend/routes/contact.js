@@ -5,6 +5,7 @@ const sendEmail = require('../utils/mailer');
 const router = express.Router();
 
 router.post('/api/contact', async (req, res) => {
+  console.log(req.body)
   const { name, email, message } = req.body;
 
   if (!email || !message) {
